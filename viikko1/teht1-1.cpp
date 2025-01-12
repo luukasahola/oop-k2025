@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
+ srand(time(0));	
  int random = rand() % 21;
- srand(time(0));
  int response;
 
  cout << "Arvaa numero välillä 1-20" << endl;
@@ -22,7 +22,7 @@ int main()
              cout << "Onnittelut, " << response << " oli oikea vastaus!" << endl;
              break;
          }
-         else {
+         if(response > random) {
              cout << "Arvauksesi oli " << response-random << " suurempi" << endl;
          }
      }

@@ -4,8 +4,8 @@
 using namespace std;
 
 int game(int maxnum) {
+    srand(time(0));	
     int random = rand() % num+1;
-    srand(time(0));
     int response;
     int counter;
 
