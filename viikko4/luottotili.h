@@ -1,0 +1,16 @@
+#ifndef LUOTTOTILI_H
+#define LUOTTOTILI_H
+
+#include "pankkitili.h"
+
+class Luottotili :public Pankkitili
+{
+public:
+    Luottotili(string,double);
+    bool deposit(double) override;
+    bool withdraw(double) override;
+protected:
+    double luottoRaja = 0; // signed, täytyy toteuttaa negatiivisten arvojen kieltäminen ehtolauseilla
+};
+
+#endif // LUOTTOTILI_H
